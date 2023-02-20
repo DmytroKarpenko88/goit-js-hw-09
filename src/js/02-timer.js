@@ -17,8 +17,6 @@ const refs = {
 isBtnStartActive(false);
 let selectedDate = null;
 
-// const flatpickr = require('flatpickr');
-
 const options = {
   enableTime: true,
   time_24hr: true,
