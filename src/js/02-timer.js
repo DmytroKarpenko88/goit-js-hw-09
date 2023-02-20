@@ -4,7 +4,6 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
 import Notiflix from 'notiflix';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
   inputDate: document.querySelector('input#datetime-picker'),
@@ -18,7 +17,7 @@ const refs = {
 isBtnStartActive(false);
 let selectedDate = null;
 
-const flatpickr = require('flatpickr');
+// const flatpickr = require('flatpickr');
 
 const options = {
   enableTime: true,
