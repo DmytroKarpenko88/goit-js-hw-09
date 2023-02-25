@@ -1,6 +1,9 @@
 import Notiflix from 'notiflix';
 
-const form = document.querySelector('form.form');
+const refs = {
+  form: document.querySelector('form.form'),
+  btnSubmit: document.querySelector('button[type="submit"]'),
+};
 
 function getFormData(formRefs) {
   return [...formRefs.elements]
@@ -33,7 +36,7 @@ function createPromise(position, delay) {
 function onSubmitForm(event) {
   event.preventDefault();
 
-  const { delay, step, amount } = getFormData(form);
+  const { delay, step, amount } = getFormData(refs.form);
 
   for (let i = 1; i <= amount; i++) {
     const promise =
@@ -53,6 +56,7 @@ function onSubmitForm(event) {
         );
       });
   }
+  event.currentTarget.reset();
 }
 
-form.addEventListener('submit', onSubmitForm);
+refs.form.addEventListener('submit', onSubmitForm);
